@@ -1,0 +1,96 @@
+<!-- PROJECT PART 2 — TUTORIAL 7 & 9 REQUIREMENTS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Part 2 Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Project Part 2 – Form & JavaScript</h1>
+
+<!-- T7: Form with multiple fieldsets -->
+<form id="mainForm">
+
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <!-- T7: Text input + pattern + length + required -->
+        <label>Name:
+            <input type="text" name="name" required minlength="2" maxlength="30" pattern="[A-Za-z ]+">
+        </label>
+
+        <!-- T7: Mobile keyboard type (email) -->
+        <label>Email:
+            <input type="email" name="email" required>
+        </label>
+
+        <!-- T7: Date input -->
+        <label>Appointment Date:
+            <input type="date" name="date" required>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Preferences</legend>
+
+        <!-- T7: Radio buttons -->
+        <p>Preferred Contact Method:</p>
+        <label><input type="radio" name="contact" value="email" required> Email</label>
+        <label><input type="radio" name="contact" value="phone"> Phone</label>
+
+        <!-- T7: Spinner (number input) -->
+        <label>Number of Guests:
+            <input type="number" name="guests" min="1" max="10">
+        </label>
+
+        <!-- T7: Range slider -->
+        <label>Rate Your Experience (1–10):
+            <input type="range" name="rating" min="1" max="10">
+        </label>
+
+        <!-- T7: Checkboxes -->
+        <p>Services Interested In:</p>
+        <label><input type="checkbox" name="service" value="design"> Web Design</label>
+        <label><input type="checkbox" name="service" value="hosting"> Hosting</label>
+        <label><input type="checkbox" name="service" value="seo"> SEO</label>
+
+        <!-- T7: Selection list -->
+        <label>Choose a Package:
+            <select name="package">
+                <option value="basic">Basic</option>
+                <option value="pro">Pro</option>
+                <option value="premium">Premium</option>
+            </select>
+        </label>
+
+        <!-- T7: Datalist -->
+        <label>Favorite Browser:
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Edge">
+            </datalist>
+        </label>
+    </fieldset>
+
+    <!-- T7: Textarea -->
+    <label>Message:
+        <textarea name="message" rows="5" cols="40"></textarea>
+    </label>
+
+    <!-- T7: Submit + Reset buttons -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
+
